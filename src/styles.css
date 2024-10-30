@@ -17,4 +17,15 @@
   .navItemInactivo{
     @apply before:w-0 before:absolute before:h-[3px] before:-bottom-1 pe-2 pb-1 after:w-3 after:h-3 after:left-0 after:opacity-0 after:translate-x-8;
   }
+
+  .cursoActivo{
+    @apply before:w-full before:absolute before:h-[3px] before:bg-black before:-bottom-3 before:left-0 before:opacity-100;
+    @apply after:w-3 after:h-3 after:rounded-full after:opacity-100 after:bg-black after:absolute after:-bottom-4 after:-right-2;
+  }
+
+  .cursoDesactivo{
+    @apply before:w-0 before:absolute before:h-[3px] before:bg-black before:-bottom-3 before:left-0 before:opacity-0;
+    @apply after:w-3 after:h-3 after:rounded-full after:opacity-0 after:bg-black after:absolute after:-bottom-4 after:right-full;
+  }
+
 }

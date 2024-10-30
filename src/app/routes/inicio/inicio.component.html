@@ -1,9 +1,126 @@
-<div class="w-full h-screen max-h-120 relative">
-  <div class="w-full h-screen absolute top-0 bg-black bg-opacity-30"></div>
-  <img src="assets/inicio/bannerInicio.jpg"  alt="bannerInicio" class="w-full h-screen object-cover" />
-  <div class="w-[95%] h-[27rem] border-2 max-w-120 left-[50%] translate-x-[-50%] border-white absolute bottom-0 max-md:h-[10rem] max-md:w-full">
-    <div class="w-[50%] ps-24 pe-28 pt-10 max-md:pe-2 max-md:ps-2 max-md:w-full">
-      <h1 class="text-7xl font-bold text-white max-md:text-lg max-md:text-center">¡ INSCRIBETE AHORA !</h1>
+<header class="w-full h-auto relative">
+  <img
+    src="assets/inicio/bannerInicio-1.jpg"
+    alt="bannerInicio"
+    class="w-full "
+  />
+  <div class="w-full h-full absolute top-0 bg-black bg-opacity-60"></div>
+  <div
+    class="w-full h-[27rem] max-w-120 left-[50%] translate-x-[-50%] absolute bottom-0 max-md:h-[10rem] max-md:w-full"
+  >
+    <div
+      class="w-[50%] ps-24 pe-24 pt-10 max-md:pe-2 max-md:ps-2 max-md:w-full"
+    >
+      <h1
+        class="text-7xl font-bold text-white max-md:text-lg max-md:text-center"
+      >
+        ¡ INSCRIBETE AHORA !
+      </h1>
     </div>
   </div>
-</div>
+</header>
+<main class="w-full h-auto relative">
+  <section class="w-full h-auto max-w-120 mx-auto py-8 px-24">
+    <h1 class="text-4xl font-bold pb-12">NUESTRAS ESPECIALIDADES</h1>
+    <ul class="flex gap-x-9">
+      <li
+        class="text-lg cursor-pointer flex-wrap transition-all duration-300 relative pe-2 before:transition-all before:duration-500 after:transition-all after:duration-500"
+        (click)="activarEstado('Software', $event)"
+        [ngClass]="isSoftware ? 'text-black cursoActivo' : 'text-azul-zai cursoDesactivo' "
+      >
+        Software
+      </li>
+      <li
+        class="text-lg text-azul-zai cursor-pointer transition-all duration-300 relative pe-2 before:transition-all before:duration-500 after:transition-all after:duration-500"
+        (click)="activarEstado('Talleres', $event)"
+        [ngClass]="isTalleres ? 'text-black cursoActivo' : 'text-azul-zai cursoDesactivo' "
+      >
+        Talleres
+      </li>
+      <li
+        class="text-lg text-azul-zai cursor-pointer transition-all duration-300 pe-2 relative before:transition-all before:duration-500 after:transition-all after:duration-500"
+        (click)="activarEstado('Especialidades', $event)"
+        [ngClass]="isEspecialidades ? 'text-black cursoActivo' : 'text-azul-zai cursoDesactivo' "
+      >
+        Especialidades
+      </li>
+    </ul>
+
+    <ul class="pt-10 flex gap-x-9 w-full h-auto overflow-hidden">
+      <li
+        class="flex gap-x-9 transition-all duration-300 flex-wrap"
+        [ngClass]="
+          isSoftware ? 'translate-x-0 relative' : '-translate-x-[500%] absolute'
+        "
+      >
+        <app-card-course
+          imagenImg="assets/inicio/corel-draw.jpg"
+          titleImg="Corel Draw"
+        />
+        <app-card-course
+          imagenImg="assets/inicio/adobe-ilustrator.jpg"
+          titleImg="Adobe Illustrator"
+        />
+        <app-card-course
+          imagenImg="assets/inicio/adobe-photoshop.jpg"
+          titleImg="Adobe Photoshop"
+        />
+      </li>
+      <li
+        class="flex gap-x-9 transition-all duration-300 flex-wrap"
+        [ngClass]="
+          isTalleres ? 'translate-x-0 relative' : '-translate-x-[500%] absolute'
+        "
+      >
+        <app-card-course
+          imagenImg="assets/inicio/dibujo-manga.jpg"
+          titleImg="Dibujo de Manga"
+        />
+        <app-card-course
+          imagenImg="assets/inicio/dibujo-tradicional.jpg"
+          titleImg="Dibujo Tradicional"
+        />
+        <app-card-course
+          imagenImg="assets/inicio/ilustracion-digital.jpg"
+          titleImg="Ilustración Digital"
+        />
+      </li>
+      <li
+        class="flex gap-x-9 transition-all duration-300 flex-wrap"
+        [ngClass]="
+          isEspecialidades
+            ? 'translate-x-0 relative'
+            : '-translate-x-[500%] absolute'
+        "
+      >
+        <app-card-course
+          imagenImg="assets/inicio/autocad-interiores.jpg"
+          titleImg="Autocad para Interiores"
+        />
+        <app-card-course
+          imagenImg="assets/inicio/marketing-digital.jpg"
+          titleImg="Marketing digital con Premier Pro"
+        />
+      </li>
+    </ul>
+
+    <article class="w-full h-auto">
+      <h1 class="text-4xl font-bold my-16">POR QUE ZAITEX ?</h1>
+    </article>
+    
+  </section>
+</main>
+<footer class="w-full h-auto bg-azul-zai ">
+  <article class="w-full h-auto max-w-120 mx-auto py-8 px-24">
+    <h1 class="text-white font-bold text-4xl">TESTIMONIOS</h1>
+    <ul class="w-full py-10">
+      <li>
+        <app-comments nombre="Tito Chavez Perez" imagenImg="assets/inicio/comentario-1.jpg" comment="Excelente contenido.. 100 recomendado.. de otro nivel" />
+      </li>
+    </ul>
+    <div class="flex justify-center gap-x-14">
+      <i class="fa-solid fa-arrow-left text-white text-5xl cursor-pointer"></i>
+      <i class="fa-solid fa-arrow-right text-white text-5xl cursor-pointer"></i>
+    </div>
+  </article>
+</footer>

@@ -7,6 +7,8 @@ import { InicioComponent } from './routes/inicio/inicio.component';
 import { NosotrosComponent } from './routes/nosotros/nosotros.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardCourseComponent } from './components/card-course/card-course.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FooterComponent } from './components/footer/footer.component';
     InicioComponent,
     NosotrosComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CardCourseComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
