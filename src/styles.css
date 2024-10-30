@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+@layer components{
+  .navItemActivo{
+    @apply before:w-full before:absolute before:h-[3px] after:opacity-100 before:bg-black before:-bottom-1 pe-2 pb-1 border-black after:translate-x-0 after:w-3 after:h-3 after:rounded-full after:bg-black z-20 after:absolute after:-bottom-2 after:-right-2;
+  }
+
+  .navItemInactivo{
+    @apply before:w-0 before:absolute before:h-[3px] before:-bottom-1 pe-2 pb-1 after:w-3 after:h-3 after:left-0 after:opacity-0 after:translate-x-8;
+  }
+}

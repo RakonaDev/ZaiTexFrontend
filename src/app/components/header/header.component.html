@@ -1,0 +1,52 @@
+<header class="w-full h-auto fixed top-7 px-8 z-10">
+  <nav class="w-full bg-[#1962EC] h-20 mx-auto flex justify-evenly max-w-120">
+    <div class="w-[10%] h-20 flex justify-center items-center">
+      <img src="assets/header/logo.svg" alt="logo" class="h-10 w-auto">
+    </div>
+    <ul class="flex w-[60%] justify-end gap-x-20">
+      <li
+        class="my-auto text-lg"
+        [ngClass]="esInicio ? 'text-black' : 'text-white'"
+      >
+        <a
+          routerLink=""
+          class="relative before:transition-all before:duration-700 after:transition-all after:duration-700"
+          [ngClass]="
+            esInicio
+            ? 'navItemActivo'
+            : 'navItemInactivo'
+          "
+          >Inicio</a
+        >
+      </li>
+      <li
+        class="my-auto text-lg"
+        [ngClass]="esNosotros ? 'text-black' : 'text-white'"
+      >
+        <a
+          routerLink="nosotros"
+          class="relative before:transition-all before:duration-700 after:transition-all after:duration-700"
+          [ngClass]="
+            esNosotros
+              ? 'navItemActivo'
+              : 'navItemInactivo'
+          "
+          >Nosotros</a
+        >
+      </li>
+      <li class="text-white my-auto text-lg"><a href="#">Cursos</a></li>
+      <li class="text-white my-auto text-lg"><a href="#">Talleres</a></li>
+      <li class="text-white my-auto text-lg">
+        <a href="#">Venta Corporativa</a>
+      </li>
+    </ul>
+
+    <a
+      href="#"
+      class="my-auto px-7 py-2 rounded-xl transition-colors duration-700 bg-black-light text-white hover:bg-slate-600 hover:duration-700"
+    >
+      <i class="fa-regular fa-user text-white"></i>
+      Iniciar sesión
+    </a>
+  </nav>
+</header>
