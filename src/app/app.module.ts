@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardCourseComponent } from './components/card-course/card-course.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { EquipoCardComponent } from './components/equipo-card/equipo-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     HeaderComponent,
     FooterComponent,
     CardCourseComponent,
-    CommentsComponent
+    CommentsComponent,
+    EquipoCardComponent
   ],
   imports: [
     BrowserModule,

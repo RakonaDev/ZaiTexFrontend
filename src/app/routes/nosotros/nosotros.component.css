@@ -1,0 +1,41 @@
+.vision-icon{
+  animation: vision alternate infinite 8s;
+}
+
+.mision-icon{
+  animation: mision alternate infinite 5s;
+}
+
+@keyframes vision {
+  0%{
+    rotate: 0deg
+  }
+
+  30% {
+    rotate: 270deg
+  }
+
+  60%{
+    rotate: 70deg
+  }
+
+  100%{
+    rotate: 200deg
+  }
+}
+
+@keyframes mision {
+  0%{
+    transform: translate(0px, 0px)
+  }
+  30%{
+    transform: translate(10px, 15px)
+  }
+
+  60%{
+    transform: translate(-15px, -10px)
+  }
+  100%{
+    transform: translate(0px, 0px)
+  }
+}
