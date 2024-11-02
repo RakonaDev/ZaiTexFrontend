@@ -1,0 +1,68 @@
+<form action="" class="w-full p-10 bg-white rounded-3xl">
+  <p class="mb-3">Registre aquí para más información</p>
+  <div class="w-full h-auto relative mb-3">
+    <select
+      name="producto"
+      id="producto"
+      title="Producto"
+      class="text-slate-500 w-full border-2 border-black px-6 py-3 rounded-xl"
+      (change)="cambiarColor($event)"
+      [(ngModel)]="producto"
+    >
+      <option value="Qué producto te interesa?" disabled class="text-slate-600">
+        Productos de interés
+      </option>
+      <option value="curso" class="text-black">Curso</option>
+      <option value="taller" class="text-black">Talleres</option>
+    </select>
+    <span>
+      <i
+        class="fa-solid fa-chevron-down absolute top-[50%] -translate-y-[50%] text-slate-800 text-xl right-6"
+      ></i>
+    </span>
+  </div>
+  <div class="w-full h-auto relative mb-3">
+    <select
+      name="curso"
+      id="nombre"
+      title="Nombre"
+      class="text-slate-500 w-full border-2 border-black px-6 py-3 rounded-xl"
+      (change)="cambiarColor($event)"
+      [(ngModel)]="curso"
+    >
+      @if( producto === 'curso' ) {
+        @for (curso of cursos; track $index) {
+          @if($index === 0) {
+            <option value="{{curso.valor}}" selected disabled>
+              {{curso.opcion}}
+            </option>
+          }
+          @else {
+            <option value="{{curso.valor}}" class="text-black">
+              {{curso.opcion}}
+            </option>
+          }
+        }
+      }
+      @else {
+        @for (taller of talleres; track $index) {
+          @if($index === 0) {
+            <option value="{{taller.valor}}" selected disabled>
+              {{taller.opcion}}
+            </option>
+          }
+          @else {
+            <option value="{{taller.valor}}" class="text-black">
+              {{taller.opcion}}
+            </option>
+          }
+        }
+      }
+    </select>
+    <span>
+      <i
+        class="fa-solid fa-chevron-down absolute top-[50%] -translate-y-[50%] text-slate-800 text-xl right-6"
+      ></i>
+    </span>
+  </div>
+</form>

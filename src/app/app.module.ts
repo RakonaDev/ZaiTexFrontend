@@ -11,6 +11,8 @@ import { CardCourseComponent } from './components/card-course/card-course.compon
 import { CommentsComponent } from './components/comments/comments.component';
 import { EquipoCardComponent } from './components/equipo-card/equipo-card.component';
 import { NgOptimizedImage } from '@angular/common';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { NgOptimizedImage } from '@angular/common';
     FooterComponent,
     CardCourseComponent,
     CommentsComponent,
-    EquipoCardComponent
+    EquipoCardComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    FormsModule
   ],
   providers: [
     provideClientHydration()

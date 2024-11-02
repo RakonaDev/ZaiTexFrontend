@@ -8,10 +8,10 @@
   />
   <div class="w-full h-full absolute top-0 bg-black bg-opacity-30"></div>
   <div
-    class="w-full h-[27rem] max-w-120 left-[50%] translate-x-[-50%] absolute bottom-0 max-md:h-[10rem] max-md:w-full"
+    class="w-full flex h-[27rem] max-w-120 left-[50%] translate-x-[-50%] absolute bottom-0 max-md:h-[10rem] max-md:w-full"
   >
     <div
-      class="w-[50%] ps-24 pe-24 pt-10 max-md:pe-2 max-md:ps-2 max-md:w-full"
+      class="w-[50%] px-36 pt-10 max-md:px-2 max-md:w-full"
     >
       @defer (on viewport) {
         <h1
@@ -24,28 +24,37 @@
         <div></div>
       }
     </div>
+    <div class="w-[50%] max-md:hidden px-36">
+      <app-form/>
+    </div>
   </div>
 </header>
 <main class="w-full h-auto relative">
-  <section class="w-full h-auto max-w-120 mx-auto py-8 px-24">
-    <h1 class="text-4xl font-bold pb-12">NUESTRAS ESPECIALIDADES</h1>
+  <section class="w-full h-auto max-w-120 mx-auto py-8 px-36">
+    
+    @defer (on viewport) {
+      <h1 class="showLeft text-4xl font-bold pb-12">NUESTRAS ESPECIALIDADES</h1>
+    }
+    @placeholder {
+      <h1 class="opacity-0 text-4xl font-bold pb-12">NUESTRAS ESPECIALIDADES</h1>
+    }
     <ul class="flex gap-x-9">
       <li
-        class="text-lg cursor-pointer flex-wrap transition-all duration-300 relative pe-2 before:transition-all before:duration-500 after:transition-all after:duration-500"
+        class="text-lg cursor-pointer flex-wrap transition-all duration-500 relative pe-2 before:transition-all before:duration-500 after:transition-all after:duration-500"
         (click)="activarEstado('Software', $event)"
         [ngClass]="isSoftware ? 'text-black cursoActivo' : 'text-azul-zai cursoDesactivo' "
       >
         Software
       </li>
       <li
-        class="text-lg text-azul-zai cursor-pointer transition-all duration-300 relative pe-2 before:transition-all before:duration-500 after:transition-all after:duration-500"
+        class="text-lg text-azul-zai cursor-pointer transition-all duration-500 relative pe-2 before:transition-all before:duration-500 after:transition-all after:duration-500"
         (click)="activarEstado('Talleres', $event)"
         [ngClass]="isTalleres ? 'text-black cursoActivo' : 'text-azul-zai cursoDesactivo' "
       >
         Talleres
       </li>
       <li
-        class="text-lg text-azul-zai cursor-pointer transition-all duration-300 pe-2 relative before:transition-all before:duration-500 after:transition-all after:duration-500"
+        class="text-lg text-azul-zai cursor-pointer transition-all duration-500 pe-2 relative before:transition-all before:duration-500 after:transition-all after:duration-500"
         (click)="activarEstado('Especialidades', $event)"
         [ngClass]="isEspecialidades ? 'text-black cursoActivo' : 'text-azul-zai cursoDesactivo' "
       >
@@ -55,9 +64,9 @@
 
     <ul class="pt-10 flex gap-x-9 w-full h-auto overflow-hidden">
       <li
-        class="flex gap-x-9 transition-all duration-300 flex-wrap"
+        class="flex gap-x-9 transition-all duration-500 flex-wrap"
         [ngClass]="
-          isSoftware ? 'translate-x-0 relative' : '-translate-x-[500%] absolute'
+          isSoftware ? 'translate-x-0 relative' : '-translate-x-[200%] absolute'
         "
       >
         <app-card-course
@@ -74,9 +83,9 @@
         />
       </li>
       <li
-        class="flex gap-x-9 transition-all duration-300 flex-wrap"
+        class="flex gap-x-9 transition-all duration-500 flex-wrap"
         [ngClass]="
-          isTalleres ? 'translate-x-0 relative' : '-translate-x-[500%] absolute'
+          isTalleres ? 'translate-x-0 relative' : '-translate-x-[200%] absolute'
         "
       >
         <app-card-course
@@ -93,11 +102,11 @@
         />
       </li>
       <li
-        class="flex gap-x-9 transition-all duration-300 flex-wrap"
+        class="flex gap-x-9 transition-all duration-500 flex-wrap"
         [ngClass]="
           isEspecialidades
             ? 'translate-x-0 relative'
-            : '-translate-x-[500%] absolute'
+            : '-translate-x-[200%] absolute'
         "
       >
         <app-card-course
@@ -112,14 +121,25 @@
     </ul>
 
     <article class="w-full h-auto">
-      <h1 class="text-4xl font-bold my-16">POR QUE ZAITEX ?</h1>
+      
+      @defer (on viewport) {
+        <h1 class="showLeft text-4xl font-bold my-16">POR QUE ZAITEX ?</h1>
+      }
+      @placeholder {
+        <h1 class="opacity-0 text-4xl font-bold my-16">POR QUE ZAITEX ?</h1>
+      }
     </article>
     
   </section>
 </main>
 <footer class="w-full h-auto bg-azul-zai ">
-  <article class="w-full h-auto max-w-120 mx-auto py-8 px-24">
-    <h1 class="text-white font-bold text-4xl">TESTIMONIOS</h1>
+  <article class="w-full h-auto max-w-120 mx-auto py-8 px-36">
+    @defer (on viewport) {
+      <h1 class="text-white font-bold text-4xl showLeft">TESTIMONIOS</h1>
+    }
+    @placeholder {
+      <h1 class="opacity-0 text-white font-bold text-4xl">TESTIMONIOS</h1>
+    }
     <ul class="w-full py-10">
       <li>
         <app-comments nombre="Tito Chavez Perez" imagenImg="assets/inicio/comentario-1.jpg" comment="Excelente contenido.. 100 recomendado.. de otro nivel" />

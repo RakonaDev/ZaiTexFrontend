@@ -9,6 +9,12 @@
   font-family: 'Inter', sans-serif;
 }
 
+select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 .showRight{
   animation: showRight alternate 1s;
 }
