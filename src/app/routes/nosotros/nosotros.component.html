@@ -1,9 +1,14 @@
 <header class="w-full h-auto relative">
-  <img
+  @defer () {
+    <img
     src="assets/nosotros/nosotrosBanner.jpg"
     alt="nosotros"
-    class="w-full bg-black aspect-auto"
-  />
+    class="w-full bg-black aspect-video"
+    />
+  }
+  @placeholder {
+    <div class="w-full h-screen bg-white"></div>
+  }
   <div class="w-full h-full absolute top-0 bg-black bg-opacity-30"></div>
   <div
     class="w-full h-[27rem] max-w-120 left-[50%] translate-x-[-50%] absolute bottom-0 max-md:h-[10rem] max-md:w-full"

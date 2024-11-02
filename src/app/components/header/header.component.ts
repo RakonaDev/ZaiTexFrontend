@@ -23,7 +23,6 @@ export class HeaderComponent {
     )
     .subscribe((event: NavigationEnd) => {
       const currentUrl = event.urlAfterRedirects;
-      window.scrollTo(0, 0);
 
       if (currentUrl === '/') {
         this.esInicio = true;
