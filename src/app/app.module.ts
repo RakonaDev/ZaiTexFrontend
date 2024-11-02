@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CardCourseComponent } from './components/card-course/card-course.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { EquipoCardComponent } from './components/equipo-card/equipo-card.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EquipoCardComponent } from './components/equipo-card/equipo-card.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgOptimizedImage
   ],
   providers: [
     provideClientHydration()
