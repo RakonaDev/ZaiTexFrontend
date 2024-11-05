@@ -2,13 +2,13 @@
   <img
     src="assets/inicio/bannerInicio-1.jpg"
     alt="bannerInicio"
-    class="w-full aspect-video"
+    class="w-full aspect-video object-cover h-auto min-h-screen"
     height="824"
-    priority
+    priority=true
   />
   <div class="w-full h-full absolute top-0 bg-black bg-opacity-30"></div>
   <div
-    class="w-full flex h-[27rem] max-w-120 left-[50%] translate-x-[-50%] absolute bottom-0 max-md:h-[10rem] max-md:w-full"
+    class="w-full z-40 flex h-[35rem] max-w-120 left-[50%] translate-x-[-50%] absolute bottom-0 max-md:h-[10rem] max-md:w-full"
   >
     <div
       class="w-[50%] px-36 pt-10 max-md:px-2 max-md:w-full"
@@ -24,16 +24,23 @@
         <div></div>
       }
     </div>
-    <div class="w-[50%] max-md:hidden px-36">
-      <app-form/>
-    </div>
+    @defer (on viewport) {
+      <div class="w-[50%] max-md:hidden px-36 z-50 showScale">
+        <app-form/>
+      </div>
+    }
+    @placeholder {
+      <div class="w-[50%] max-md:hidden px-36 z-50 opacity-0">
+        <app-form/>
+      </div>
+    }
   </div>
 </header>
 <main class="w-full h-auto relative">
-  <section class="w-full h-auto max-w-120 mx-auto py-8 px-36">
+  <section class="w-full h-auto max-w-120 mx-auto py-8 px-36 -z-10">
     
     @defer (on viewport) {
-      <h1 class="showLeft text-4xl font-bold pb-12">NUESTRAS ESPECIALIDADES</h1>
+      <h1 class="showLeft text-4xl font-bold pb-12 -z-10 relative">NUESTRAS ESPECIALIDADES</h1>
     }
     @placeholder {
       <h1 class="opacity-0 text-4xl font-bold pb-12">NUESTRAS ESPECIALIDADES</h1>

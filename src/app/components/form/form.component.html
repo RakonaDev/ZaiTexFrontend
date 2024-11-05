@@ -1,13 +1,14 @@
-<form action="" class="w-full p-10 bg-white rounded-3xl">
+<form action="" class="w-full p-10 bg-white rounded-3xl border-r-4 border-b-4 border-azul-zai z-40 relative">
   <p class="mb-3">Registre aquí para más información</p>
   <div class="w-full h-auto relative mb-3">
     <select
       name="producto"
       id="producto"
       title="Producto"
-      class="text-slate-500 w-full border-2 border-black px-6 py-3 rounded-xl"
+      class="text-slate-500 w-full border-2 border-black px-6 py-3 rounded-xl bg-gray-200"
       (change)="cambiarColor($event)"
       [(ngModel)]="producto"
+      required
     >
       <option value="Qué producto te interesa?" disabled class="text-slate-600">
         Productos de interés
@@ -24,11 +25,14 @@
   <div class="w-full h-auto relative mb-3">
     <select
       name="curso"
-      id="nombre"
-      title="Nombre"
-      class="text-slate-500 w-full border-2 border-black px-6 py-3 rounded-xl"
-      (change)="cambiarColor($event)"
+      id="curso"
+      title="Curso"
+      class=" w-full border-2 border-black px-6 py-3 rounded-xl disabled:bg-gray-200 "
+      [ngClass]="curso === 'Que curso te gustaría estudiar?' || curso === 'Que taller te gustaría estudiar?' ? 'text-slate-500' : 'text-black' "
+      (change)="cambiarColor($event, '')"
       [(ngModel)]="curso"
+      [disabled]="producto === 'Qué producto te interesa?' ? true : false "
+      required
     >
       @if( producto === 'curso' ) {
         @for (curso of cursos; track $index) {
@@ -65,4 +69,58 @@
       ></i>
     </span>
   </div>
+
+  <div class="w-full h-auto relative mb-3">
+    <select
+      name="provincia"
+      id="provincia"
+      title="Direccion"
+      class=" w-full border-2 border-black px-6 py-3 rounded-xl bg-gray-200"
+      [ngClass]="provincia === 'Escoja su Departamento de procedencia' ? 'text-slate-500' : 'text-black' "
+      [(ngModel)]="provincia"
+      required
+    >
+      @for (departamento of departamentosPeru; track $index) {
+        @if($index === 0) {
+          <option value="{{departamento.valor}}" selected disabled>
+            {{departamento.opcion}}
+          </option>
+        }
+        @else {
+          <option value="{{departamento.valor}}" class="text-black">
+            {{departamento.opcion}}
+          </option>
+        }
+      }
+    </select>
+    <span>
+      <i
+        class="fa-solid fa-chevron-down absolute top-[50%] -translate-y-[50%] text-slate-800 text-xl right-6"
+      ></i>
+    </span>
+  </div>
+
+  <div class="flex gap-x-4 gap-y-4 w-full h-auto mb-3">
+    <input type="text" name="nombre" id="nombre" class="w-[50%] px-6 py-3 border-2 border-black rounded-xl bg-gray-200 placeholder:text-slate-500" [(ngModel)]="nombre" placeholder="Ingrese su nombre" required>
+    <input type="text" name="apellido" id="apellido" class="w-[50%] px-6 py-3 border-2 border-black rounded-xl bg-gray-200 placeholder:text-slate-500" [(ngModel)]="apellido" placeholder="Ingrese su apellido" required>
+  </div>
+  <div class="flex gap-x-4 gap-y-4 w-full h-auto mb-3">
+    <input type="tel" name="celuar" id="celular" class="w-[50%] px-6 py-3 border-2 border-black rounded-xl bg-gray-200 placeholder:text-slate-500" [(ngModel)]="celular" placeholder="Ingrese su celular" required>
+    <input type="text" name="dni" id="dni" class="w-[50%] px-6 py-3 border-2 border-black rounded-xl bg-gray-200 placeholder:text-slate-500 appearance-none " [(ngModel)]="dni" placeholder="Ingrese su DNI" required>
+  </div>
+  <div class="flex h-auto mb-3">
+    <input type="email" name="email" id="email" class="w-full px-6 py-3 border-2 border-black rounded-xl bg-gray-200 placeholder:text-slate-500" [(ngModel)]="email" placeholder="Ingrese su correo" required>
+  </div>
+  <p class="mb-3">Por donde nos comunicamos: </p>
+  <div class="mb-3">
+    <input type="radio" name="modo" id="modo" class="z-50 me-2" required>
+    <label for="modo" class="me-4">WhatsApp</label>
+    <input type="radio" name="modo" id="modoCelular" class="me-2" required>
+    <label for="modoCelular">Celular</label>
+  </div>
+  <div class="w-full mb-5">
+    <input type="checkbox" name="check" id="check" class="me-3" required>
+    <label for="check">Acepto las políticas</label>
+  </div>
+  <input type="submit" value="Solicitar Información" class="w-full bg-azul-zai text-white py-4 rounded-xl cursor-pointer transition-colors duration-500 hover:bg-azul-oscuro">
 </form>
