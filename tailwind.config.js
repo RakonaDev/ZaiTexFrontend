@@ -13,6 +13,9 @@ module.exports = {
       },
       spacing: {
         '120': '120rem'
+      },
+      gridTemplateColumns: {
+        'layout': 'repeat(auto-fit, minmax(301px, 301px))',
       }
     },
   },

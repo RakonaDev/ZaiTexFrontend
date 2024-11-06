@@ -1,0 +1,119 @@
+<header class="w-full h-auto relative">
+  <img
+    src="{{ imagenUrl }}"
+    alt="Imagen de la página principal"
+    class="w-full"
+  />
+  <div class="bg-black w-full h-full absolute top-0 bg-opacity-30"></div>
+  <section
+    class="w-full h-[35rem] flex absolute bottom-0 left-[50%] -translate-x-[50%] max-w-120 mx-auto py-8 px-36 z-40"
+  >
+    <div class="w-[60%]">
+      @defer (on viewport) {
+      <h1 class="showLeft text-white text-7xl font-bold">{{ tituloCurso }}</h1>
+      } @placeholder {
+      <h1 class="opacity-0 text-white text-7xl font-bold">{{ tituloCurso }}</h1>
+      }
+      <a
+        href="#"
+        class="flex items-center gap-x-4 text-white bg-azul-zai px-6 py-2 w-fit mt-10 rounded-xl transition-colors duration-500 hover:bg-black-light hover:text-white"
+      >
+        <img
+          src="assets/course-layout/aislamiento.svg"
+          alt=""
+          width="27"
+          height="31"
+        />
+        Descarga malla curricular
+      </a>
+    </div>
+    <div class="w-[40%]">
+      <app-form />
+    </div>
+  </section>
+</header>
+
+<main class="w-full h-auto relative bg-white">
+  <section class="w-full h-auto max-w-120 mx-auto py-8 px-36">
+    <div class="flex w-full gap-5">
+      <div class="bg-blanco-comentario flex-grow max-w-[360px] flex items-center p-4 gap-x-4 rounded-2xl transition-colors duration-500 hover:bg-gray-400 cursor-default">
+        <img
+          src="assets/course-layout/duracion.svg"
+          alt="duracion"
+          width="37"
+          height="37"
+        />
+        <div class="">
+          <h1 class="font-bold text-azul-oscuro text-lg">DURACIÓN</h1>
+          <p>{{horasAcademicas}}</p>
+          <p> {{duracionAprox}}</p>
+        </div>
+      </div>
+      <div class="bg-blanco-comentario flex-grow max-w-[360px] flex p-5 gap-x-4 rounded-2xl transition-colors duration-500 hover:bg-gray-400 cursor-default">
+        <img
+          src="assets/course-layout/horarios.svg"
+          alt="duracion"
+          width="37"
+          height="37"
+        />
+        <div class="flex flex-col justify-center">
+          <h1 class="font-bold text-azul-oscuro text-lg">HORARIOS</h1>
+          <p>{{horarios}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-blanco-comentario max-w-[741px] mt-5 flex p-5 gap-x-4 rounded-2xl transition-colors duration-500 hover:bg-gray-400 cursor-default">
+      <img
+        src="assets/course-layout/otorga.svg"
+        alt="duracion"
+        width="37"
+        height="37"
+      />
+      <div>
+        <h1 class="font-bold text-azul-oscuro text-lg">ZAITEX OTORGA</h1>
+        <p>{{otorga}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full h-auto max-w-120 mx-auto py-8 px-36">
+    @defer (on viewport) {
+    <h1 class="showLeft text-5xl font-bold text-azul-oscuro">
+      En que consiste el curso?
+    </h1>
+    } @placeholder {
+    <h1 class="opacity-0 text-5xl font-bold">En que consiste el curso?</h1>
+    } @defer (on viewport) {
+    <p class="showTop text-black mt-10 text-lg leading-7 text-justify">
+      {{ descCurso }}
+    </p>
+    } @placeholder {
+    <p class="opacity-0 text-black mt-10 text-lg leading-7 text-justify">
+      {{ descCurso }}
+    </p>
+    }
+
+    <article class="w-full h-auto py-24 flex gap-x-10 justify-center">
+      <div class="w-auto h-auto">
+        <header class="bg-azul-oscuro text-white p-2 w-fit font-bold text-lg">
+          Dirigido a
+        </header>
+        <main
+          class="w-[442px] h-auto bg-azul-zai text-white text-justify p-4 leading-7 ms-10 py-9"
+        >
+          {{ dirigido }}
+        </main>
+      </div>
+      <div class="w-auto h-auto">
+        <header class="bg-azul-oscuro text-white p-2 w-fit font-bold text-lg">
+          Metodología
+        </header>
+        <main
+          class="w-[442px] h-auto bg-azul-zai text-white text-justify p-4 leading-7 ms-10 py-9"
+        >
+          {{ metodologia }}
+        </main>
+      </div>
+    </article>
+  </section>
+</main>

@@ -18,6 +18,7 @@ export class HeaderComponent {
   }
 
   ngOnInit(): void {
+    
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd)
     )

@@ -13,6 +13,8 @@ import { EquipoCardComponent } from './components/equipo-card/equipo-card.compon
 import { NgOptimizedImage } from '@angular/common';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
+import { CourseLayoutComponent } from './components/course-layout/course-layout.component';
+import { CorelDrawComponent } from './routes/corel-draw/corel-draw.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { FormsModule } from '@angular/forms';
     CommentsComponent,
     EquipoCardComponent,
     FormComponent,
+    CourseLayoutComponent,
+    CorelDrawComponent,
   ],
   imports: [
     BrowserModule,
