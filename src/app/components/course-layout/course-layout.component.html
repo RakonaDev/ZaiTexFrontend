@@ -2,7 +2,8 @@
   <img
     src="{{ imagenUrl }}"
     alt="Imagen de la página principal"
-    class="w-full"
+    class="w-full aspect-video"
+    height="824"
   />
   <div class="bg-black w-full h-full absolute top-0 bg-opacity-30"></div>
   <section
@@ -14,9 +15,10 @@
       } @placeholder {
       <h1 class="opacity-0 text-white text-7xl font-bold">{{ tituloCurso }}</h1>
       }
-      <a
+      @defer (on viewport) {
+        <a
         href="#"
-        class="flex items-center gap-x-4 text-white bg-azul-zai px-6 py-2 w-fit mt-10 rounded-xl transition-colors duration-500 hover:bg-black-light hover:text-white"
+        class="fadeIn flex items-center gap-x-4 text-white bg-azul-zai px-6 py-2 w-fit mt-10 rounded-xl transition-colors duration-500 hover:bg-black-light hover:text-white"
       >
         <img
           src="assets/course-layout/aislamiento.svg"
@@ -26,9 +28,32 @@
         />
         Descarga malla curricular
       </a>
+      }@placeholder {
+        <a
+        href="#"
+        class="flex opacity-0 items-center gap-x-4 text-white bg-azul-zai px-6 py-2 w-fit mt-10 rounded-xl transition-colors duration-500 hover:bg-black-light hover:text-white"
+      >
+        <img
+          src="assets/course-layout/aislamiento.svg"
+          alt=""
+          width="27"
+          height="31"
+        />
+        Descarga malla curricular
+      </a>
+      }
     </div>
     <div class="w-[40%]">
-      <app-form />
+      @defer (on viewport) {
+        <div class="showScale">
+          <app-form />
+        </div>
+      }
+      @placeholder {
+        <div class="opacity-0">
+          <app-form />
+        </div>
+      }
     </div>
   </section>
 </header>
@@ -36,7 +61,7 @@
 <main class="w-full h-auto relative bg-white">
   <section class="w-full h-auto max-w-120 mx-auto py-8 px-36">
     <div class="flex w-full gap-5">
-      <div class="bg-blanco-comentario flex-grow max-w-[360px] flex items-center p-4 gap-x-4 rounded-2xl transition-colors duration-500 hover:bg-gray-400 cursor-default">
+      <div class="bg-blanco-comentario flex-grow max-w-[360px] flex items-center p-4 gap-x-4 rounded-2xl transition-colors duration-300 hover:bg-gray-400 cursor-default">
         <img
           src="assets/course-layout/duracion.svg"
           alt="duracion"
@@ -49,7 +74,7 @@
           <p> {{duracionAprox}}</p>
         </div>
       </div>
-      <div class="bg-blanco-comentario flex-grow max-w-[360px] flex p-5 gap-x-4 rounded-2xl transition-colors duration-500 hover:bg-gray-400 cursor-default">
+      <div class="bg-blanco-comentario flex-grow max-w-[360px] flex p-5 gap-x-4 rounded-2xl transition-colors duration-300 hover:bg-gray-400 cursor-default">
         <img
           src="assets/course-layout/horarios.svg"
           alt="duracion"
@@ -62,7 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-blanco-comentario max-w-[741px] mt-5 flex p-5 gap-x-4 rounded-2xl transition-colors duration-500 hover:bg-gray-400 cursor-default">
+    <div class="bg-blanco-comentario max-w-[741px] mt-5 flex p-5 gap-x-4 rounded-2xl transition-colors duration-300 hover:bg-gray-400 cursor-default">
       <img
         src="assets/course-layout/otorga.svg"
         alt="duracion"

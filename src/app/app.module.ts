@@ -15,6 +15,10 @@ import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { CourseLayoutComponent } from './components/course-layout/course-layout.component';
 import { CorelDrawComponent } from './routes/corel-draw/corel-draw.component';
+import { AdobeIlustratorComponent } from './routes/adobe-ilustrator/adobe-ilustrator.component';
+import { AdobePhotoshopComponent } from './routes/adobe-photoshop/adobe-photoshop.component';
+import { AutocadComponent } from './routes/autocad/autocad.component';
+import { MarketingDigitalComponent } from './routes/marketing-digital/marketing-digital.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { CorelDrawComponent } from './routes/corel-draw/corel-draw.component';
     FormComponent,
     CourseLayoutComponent,
     CorelDrawComponent,
+    AdobeIlustratorComponent,
+    AdobePhotoshopComponent,
+    AutocadComponent,
+    MarketingDigitalComponent,
   ],
   imports: [
     BrowserModule,

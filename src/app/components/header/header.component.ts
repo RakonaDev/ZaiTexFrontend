@@ -33,6 +33,10 @@ export class HeaderComponent {
         this.esInicio = false;
         this.esNosotros = true;
       }
+      else if (currentUrl.includes('/cursos')) {
+        this.esInicio = false;
+        this.esNosotros = false;
+      }
     });
   }
 
