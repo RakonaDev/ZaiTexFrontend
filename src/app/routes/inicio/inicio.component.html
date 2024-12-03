@@ -39,12 +39,7 @@
 <main class="w-full h-auto relative">
   <section class="w-full h-auto max-w-120 mx-auto py-8 px-36 -z-10">
     
-    @defer (on viewport) {
-      <h1 class="showLeft text-4xl font-bold pb-12 -z-10 relative text-azul-oscuro">NUESTRAS ESPECIALIDADES</h1>
-    }
-    @placeholder {
-      <h1 class="opacity-0 text-4xl font-bold pb-12">NUESTRAS ESPECIALIDADES</h1>
-    }
+    <h1 class="text-4xl font-bold pb-12 -z-10 relative text-azul-oscuro" data-aos="fade-right">NUESTRAS ESPECIALIDADES</h1>
     <ul class="flex gap-x-9">
       <li
         class="text-lg cursor-pointer flex-wrap transition-all duration-500 relative pe-2 before:transition-all before:duration-500 after:transition-all after:duration-500"
@@ -128,25 +123,14 @@
     </ul>
 
     <article class="w-full h-auto">
-      
-      @defer (on viewport) {
-        <h1 class="showLeft text-azul-oscuro text-4xl font-bold my-16">POR QUE ZAITEX ?</h1>
-      }
-      @placeholder {
-        <h1 class="opacity-0 text-4xl font-bold my-16">POR QUE ZAITEX ?</h1>
-      }
+      <h1 class="text-azul-oscuro text-4xl font-bold my-16" data-aos="fade-right">POR QUE ZAITEX ?</h1>
     </article>
     
   </section>
 </main>
 <footer class="w-full h-auto bg-azul-zai ">
   <article class="w-full h-auto max-w-120 mx-auto py-8 px-36">
-    @defer (on viewport) {
-      <h1 class="text-white font-bold text-4xl showLeft">TESTIMONIOS</h1>
-    }
-    @placeholder {
-      <h1 class="opacity-0 text-white font-bold text-4xl">TESTIMONIOS</h1>
-    }
+    <h1 class="text-white font-bold text-4xl" data-aos="fade-right">TESTIMONIOS</h1>
     <ul class="w-full py-10">
       <li>
         <app-comments nombre="Tito Chavez Perez" imagenImg="assets/inicio/comentario-1.jpg" comment="Excelente contenido.. 100 recomendado.. de otro nivel" />

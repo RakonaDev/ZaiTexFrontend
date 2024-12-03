@@ -12,6 +12,7 @@ export class HeaderComponent {
   title = 'ZaitexNG';
   esInicio = false;
   esNosotros = false;
+  esVentaCorporativa = false;
 
   constructor(private router: Router) {
     
@@ -29,13 +30,21 @@ export class HeaderComponent {
       if (currentUrl === '/') {
         this.esInicio = true;
         this.esNosotros = false;
+        this.esVentaCorporativa = false;
       } else if (currentUrl === '/nosotros') {
         this.esInicio = false;
         this.esNosotros = true;
+        this.esVentaCorporativa = false;
       }
       else if (currentUrl.includes('/cursos')) {
         this.esInicio = false;
         this.esNosotros = false;
+        this.esVentaCorporativa = false;
+      }
+      else if (currentUrl.includes('/venta-corporativa')) {
+        this.esInicio = false;
+        this.esNosotros = false;
+        this.esVentaCorporativa = true;
       }
     });
   }

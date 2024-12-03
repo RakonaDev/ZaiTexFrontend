@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit {
 
   constructor() {}
 
   isSoftware ?: boolean = true
   isTalleres ?: boolean = false
   isEspecialidades ?: boolean = false
+
+  ngOnInit(): void {
+      Aos.init({
+        once: false,
+        duration: 700,
+        easing: 'ease-out-sine',
+        offset: 100
+      })
+  }
 
   activarEstado (tipo : string, event : Event): void {
     if(tipo == "Software"){
@@ -31,7 +41,5 @@ export class InicioComponent {
       this.isTalleres = false
       this.isSoftware = false
     }
-    console.log(tipo)
-    console.log(event.target)
   }
 }

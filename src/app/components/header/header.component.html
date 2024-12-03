@@ -53,8 +53,20 @@
         </div>
       </li>
       <li class="text-white flex-grow flex justify-center my-auto text-lg"><a href="#" >Talleres</a></li>
-      <li class="text-white flex justify-center my-auto flex-grow text-lg">
-        <a routerLink="venta-corporativa" class="mx-auto">Venta Corporativa</a>
+      <li class=" flex justify-center my-auto flex-grow text-lg"
+      [ngClass]="esVentaCorporativa ? 'text-black' : 'text-white'"
+      >
+        <a 
+          routerLink="venta-corporativa" 
+          class="mx-auto relative before:transition-all before:duration-700 after:transition-all after:duration-700"
+          [ngClass]="
+            esVentaCorporativa
+              ? 'navItemActivo'
+              : 'navItemInactivo'
+          "
+        >
+          Venta Corporativa
+        </a>
       </li>
     </ul>
 
