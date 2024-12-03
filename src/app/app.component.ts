@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,14 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    Aos.init({
+      once: false,
+      duration: 700,
+      easing: 'ease-out-sine',
+      offset: 100
+    })
+    console.log("Hola Aplicacion")
+
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd)
     )

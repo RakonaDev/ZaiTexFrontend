@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-course-layout',
   templateUrl: './course-layout.component.html',
   styleUrl: './course-layout.component.css'
 })
-export class CourseLayoutComponent {
+export class CourseLayoutComponent implements OnInit{
   @Input() imagenUrl?: string;
   @Input() tituloCurso?: string;
   @Input() descCurso?: string;
@@ -15,4 +16,13 @@ export class CourseLayoutComponent {
   @Input() duracionAprox?: string;
   @Input() horarios?: string;
   @Input() otorga?: string;
+
+  ngOnInit(): void {
+    Aos.init({
+      once: false,
+      duration: 700,
+      easing: 'ease-out-sine',
+      offset: 100
+    })
+  }
 }

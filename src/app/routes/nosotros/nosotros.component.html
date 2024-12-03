@@ -33,29 +33,20 @@
 </header>
 <main class="w-full h-auto relative bg-white">
   <section class="w-full h-auto max-w-120 mx-auto py-8 px-36">
-    @defer (on viewport) {
-      <h1 class="showLeft text-5xl text-azul-oscuro font-bold pt-5">Nuestra Historia</h1>
-    }
-    @placeholder {
-      <h1 class="opacity-0 text-5xl font-bold pt-5">Nuestra Historia</h1>
-    }
-    @defer (on viewport) {
-      <p class="showTop pt-10 text-justify text-xl leading-10">
-        Nuestro nacimiento está imbuido de la firme convicción de propulsar el
-        crecimiento de aquellos profesionales que ansían forjar su camino en base
-        a su pasión, aspirando a transformar realidades mediante la aportación de
-        un valor sustancial. Nos dedicamos apasionadamente a cultivar el potencial
-        de cada individuo, proporcionando las herramientas y recursos necesarios
-        para catalizar su desarrollo y alcanzar nuevas alturas en su trayectoria
-        profesional. En nuestra misión, no solo buscamos impulsar carreras, sino
-        también inspirar la excelencia y fomentar comunidades de aprendizaje,
-        donde la innovación y el éxito convergen en un camino compartido hacia el
-        logro de metas extraordinarias.
-      </p>
-    }
-    @placeholder {
-      <p></p>
-    }
+    <h1 class="text-5xl text-azul-oscuro font-bold pt-5" data-aos="fade-right">Nuestra Historia</h1>
+    
+    <p class="pt-10 text-justify text-xl leading-10" data-aos="fade-up">
+      Nuestro nacimiento está imbuido de la firme convicción de propulsar el
+      crecimiento de aquellos profesionales que ansían forjar su camino en base
+      a su pasión, aspirando a transformar realidades mediante la aportación de
+      un valor sustancial. Nos dedicamos apasionadamente a cultivar el potencial
+      de cada individuo, proporcionando las herramientas y recursos necesarios
+      para catalizar su desarrollo y alcanzar nuevas alturas en su trayectoria
+      profesional. En nuestra misión, no solo buscamos impulsar carreras, sino
+      también inspirar la excelencia y fomentar comunidades de aprendizaje,
+      donde la innovación y el éxito convergen en un camino compartido hacia el
+      logro de metas extraordinarias.
+    </p>
     <section class="w-full h-auto pt-28 flex">
       <aside class="w-[50%] flex justify-center items-center">
         <img
@@ -65,52 +56,31 @@
         />
       </aside>
       <main class="w-[50%] h-full">
-        @defer (on viewport) {
-          <h1 class="showRight font-bold text-azul-oscuro text-5xl">Misión</h1>
-        }
-        @placeholder {
-          <h1></h1>
-        }
-        @defer (on viewport) {
-          <p class="showTop pt-10 text-justify text-xl leading-10">
-            Ser reconocidos como la academia de referencia en la formación técnica
-            y práctica de diseñadores y artistas, destacada por su calidad
-            educativa y enfoque innovador. Aspiramos a construir una comunidad
-            creativa donde la excelencia, la innovación y el desarrollo personal y
-            profesional se entrelacen, potenciando el futuro de las industrias
-            creativas a nivel global.
-          </p>
-          
-        }
-        @placeholder {
-          <p></p>
-        }
+        <h1 class="font-bold text-azul-oscuro text-5xl" data-aos="fade-left">Misión</h1>
+        <p class="pt-10 text-justify text-xl leading-10" data-aos="fade-left">
+          Ser reconocidos como la academia de referencia en la formación técnica
+          y práctica de diseñadores y artistas, destacada por su calidad
+          educativa y enfoque innovador. Aspiramos a construir una comunidad
+          creativa donde la excelencia, la innovación y el desarrollo personal y
+          profesional se entrelacen, potenciando el futuro de las industrias
+          creativas a nivel global.
+        </p>
       </main>
     </section>
 
     <section class="w-full h-auto pt-28 flex">
       <main class="w-[50%] h-full">
-        @defer (on viewport) {
-          <h1 class="showRight text-azul-oscuro font-bold text-5xl">Visión</h1>
-        }
-        @placeholder {
-          <h1></h1>
-        }
-        @defer (on viewport) {
-          <p class="showTop text-xl leading-10 text-justify pt-10">
-            Nuestra misión es formar profesionales en diseño y arte mediante una
-            metodología técnico-práctica que conecta la teoría con la experiencia
-            real. Proporcionamos herramientas, recursos y un entorno de
-            aprendizaje dinámico para que cada estudiante desarrolle su potencial
-            creativo y técnico, logrando un impacto significativo en la industria.
-            Nos enfocamos en capacitar a nuestros alumnos para que puedan
-            materializar su pasión en proyectos concretos y exitosos,
-            contribuyendo al desarrollo de sus trayectorias profesionales.
-          </p>
-        }
-        @placeholder {
-          <p></p>
-        }
+        <h1 class="text-azul-oscuro font-bold text-5xl" data-aos="fade-right">Visión</h1>
+        <p class="text-xl leading-10 text-justify pt-10" data-aos="fade-right">
+          Nuestra misión es formar profesionales en diseño y arte mediante una
+          metodología técnico-práctica que conecta la teoría con la experiencia
+          real. Proporcionamos herramientas, recursos y un entorno de
+          aprendizaje dinámico para que cada estudiante desarrolle su potencial
+          creativo y técnico, logrando un impacto significativo en la industria.
+          Nos enfocamos en capacitar a nuestros alumnos para que puedan
+          materializar su pasión en proyectos concretos y exitosos,
+          contribuyendo al desarrollo de sus trayectorias profesionales.
+        </p>
       </main>
       <aside class="w-[50%] flex justify-center items-center">
         <img
@@ -122,12 +92,7 @@
     </section>
 
     <article class="w-full h-auto pt-24">
-      @defer (on viewport) {
-        <h1 class="showLeft text-5xl font-bold text-azul-oscuro">Nuestro equipo</h1>
-      }
-      @placeholder {
-        <h1 class="opacity-0 text-5xl font-bold">Nuestro equipo</h1>
-      }
+      <h1 class="text-5xl font-bold text-azul-oscuro" data-aos="fade-right">Nuestro equipo</h1>
       <ul class="flex justify-between pt-16">
         <li>
           <app-equipo-card

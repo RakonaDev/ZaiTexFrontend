@@ -1,0 +1,82 @@
+<header class="w-full h-auto relative">
+  <img src="assets/venta-corporativa/banner-venta.jpg" alt="banner" class="w-full h-auto" width="1440" height="856">
+  <div class="w-full h-full bg-black bg-opacity-35 absolute top-0"></div>
+  <section
+    class="w-full h-[35rem] flex absolute bottom-0 left-[50%] -translate-x-[50%] max-w-120 mx-auto py-8 px-36 z-40"
+  >
+    <div class="w-[60%]">
+      @defer (on viewport) {
+      <h1 class="showLeft text-white text-7xl font-bold">Venta Corporativa</h1>
+      } @placeholder {
+      <h1 class="opacity-0 text-white text-7xl font-bold">Venta Corporativa</h1>
+      }
+      @defer (on viewport) {
+        <a
+        href="#"
+        class="fadeIn flex items-center gap-x-4 text-white bg-azul-zai px-6 py-2 w-fit mt-10 rounded-xl transition-colors duration-500 hover:bg-black-light hover:text-white"
+      >
+        <img
+          src="assets/course-layout/aislamiento.svg"
+          alt=""
+          width="27"
+          height="31"
+        />
+        Descarga malla curricular
+      </a>
+      }@placeholder {
+        <a
+        href="#"
+        class="flex opacity-0 items-center gap-x-4 text-white bg-azul-zai px-6 py-2 w-fit mt-10 rounded-xl transition-colors duration-500 hover:bg-black-light hover:text-white"
+      >
+        <img
+          src="assets/course-layout/aislamiento.svg"
+          alt=""
+          width="27"
+          height="31"
+        />
+        Descarga malla curricular
+      </a>
+      }
+    </div>
+    <div class="w-[40%]">
+      @defer (on viewport) {
+        <div class="showScale">
+          <app-form />
+        </div>
+      }
+      @placeholder {
+        <div class="opacity-0">
+          <app-form />
+        </div>
+      }
+    </div>
+  </section>
+</header>
+<main class="bg-white text-azul-oscuro w-full h-auto">
+  <section class="w-full h-auto max-w-120 mx-auto py-8 px-36">
+    <h1 class="text-4xl font-bold w-[40vw] mt-8" data-aos="fade-right">Brindamos soluciones efectivas para empresas</h1>
+    <p class="mt-16 text-xl" data-aos="fade-up">Creamos programas personalizados basados en las necesidades específicas que identificamos a través de un diagnóstico exhaustivo realizado junto con la organización.</p>
+    <h1 class="text-4xl mt-10 font-bold" data-aos="fade-right">Como Trabajamos ?</h1>
+    <p class="mt-10 text-xl" data-aos="fade-up">Garantizamos que cada paso del proceso sea práctico y altamente eficiente, optimizando los recursos y tiempos para lograr resultados efectivos.</p>
+    <h1 class="mt-10 text-4xl font-bold" data-aos="fade-right">Capacitación de cursos en alta demanda</h1>
+
+    <article class="mt-10 flex gap-10 overflow-hidden py-10">
+      <app-venta-card 
+        img="assets/venta-corporativa/item1.jpg"
+        nombre="Diseño Gráfico para Redes Sociales"
+      />
+      <app-venta-card 
+        img="assets/venta-corporativa/item2.jpg"
+        nombre="Diseño Creativo para Proyectos Publicitarios"
+      />
+      <app-venta-card 
+        img="assets/venta-corporativa/item3.jpg"
+        nombre="Liderazgo y Gestión de Equipos Creativos"
+      />
+      <app-venta-card 
+        img="assets/venta-corporativa/item4.jpg"
+        nombre="Gestión del Tiempo para Creativos"
+      />
+    </article>
+  </section>
+</main>

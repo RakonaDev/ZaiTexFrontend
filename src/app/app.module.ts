@@ -19,6 +19,8 @@ import { AdobeIlustratorComponent } from './routes/adobe-ilustrator/adobe-ilustr
 import { AdobePhotoshopComponent } from './routes/adobe-photoshop/adobe-photoshop.component';
 import { AutocadComponent } from './routes/autocad/autocad.component';
 import { MarketingDigitalComponent } from './routes/marketing-digital/marketing-digital.component';
+import { VentaCorporativaComponent } from './routes/venta-corporativa/venta-corporativa.component';
+import { VentaCardComponent } from './components/venta-card/venta-card.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { MarketingDigitalComponent } from './routes/marketing-digital/marketing-
     AdobePhotoshopComponent,
     AutocadComponent,
     MarketingDigitalComponent,
+    VentaCorporativaComponent,
+    VentaCardComponent,
   ],
   imports: [
     BrowserModule,

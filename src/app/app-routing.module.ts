@@ -7,6 +7,7 @@ import { AdobeIlustratorComponent } from './routes/adobe-ilustrator/adobe-ilustr
 import { AdobePhotoshopComponent } from './routes/adobe-photoshop/adobe-photoshop.component';
 import { MarketingDigitalComponent } from './routes/marketing-digital/marketing-digital.component';
 import { AutocadComponent } from './routes/autocad/autocad.component';
+import { VentaCorporativaComponent } from './routes/venta-corporativa/venta-corporativa.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   { path: 'cursos/adobe-illustrator', component: AdobeIlustratorComponent },
   { path: 'cursos/adobe-photoshop', component: AdobePhotoshopComponent },
   { path: 'cursos/marketing-digital', component: MarketingDigitalComponent },
-  { path: 'cursos/autocad-para-interiores', component: AutocadComponent }
+  { path: 'cursos/autocad-para-interiores', component: AutocadComponent },
+  { path: 'venta-corporativa', component: VentaCorporativaComponent },
+  { path: '*', redirectTo: '' },
 ];
 
 @NgModule({
